@@ -6,7 +6,7 @@ import torch
 # Training hyperparameters
 batch_size = 64
 test_batch_size = 3
-epochs = 20
+epochs = 100
 lr = 3e-5
 gamma = 0.7
 seed = 42

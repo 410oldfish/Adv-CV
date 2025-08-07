@@ -15,17 +15,24 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Transforms 数据增强
 train_transforms = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.RandomResizedCrop(224),
+    # transforms.Resize((224, 224)),
+    transforms.RandomCrop(32, padding=4),
     transforms.RandomHorizontalFlip(),
     transforms.ToTensor(),
+    transforms.Normalize([0.5]*3, [0.5]*3),
 ])
 
 test_transforms = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
     transforms.ToTensor(),
+    transforms.Normalize([0.5]*3, [0.5]*3),
 ])
+
+
+# test_transforms = transforms.Compose([
+#     transforms.Resize(256),
+#     transforms.CenterCrop(224),
+#     transforms.ToTensor(),
+# ])
 
 # Dataset 数据集，已经按batch划分好
 class CatsDogsDataset(Dataset):
@@ -75,15 +82,15 @@ def get_test_loader(test_dir):
 def build_model():
     efficient_transformer = Linformer(
         dim=128,
-        seq_len=49+1,
+        seq_len=16+1,
         depth=12,
         heads=8,
         k=64
     )
     model = ViT(
         dim=128,
-        image_size=224,
-        patch_size=32,
+        image_size=32,
+        patch_size=8,
         num_classes=2,
         transformer=efficient_transformer,
         channels=3,
