@@ -1,0 +1,299 @@
+Epoch 1 | Train Loss: 17.3624 | Train Acc: 0.5041
+Validation Acc: 0.5210
+100% 25/25 [00:01<00:00, 13.54it/s]
+Epoch 2 | Train Loss: 17.4265 | Train Acc: 0.4920
+Validation Acc: 0.5077
+100% 25/25 [00:01<00:00, 12.57it/s]
+Epoch 3 | Train Loss: 17.2831 | Train Acc: 0.5219
+Validation Acc: 0.4923
+100% 25/25 [00:02<00:00, 10.95it/s]
+Epoch 4 | Train Loss: 17.3823 | Train Acc: 0.5025
+Validation Acc: 0.5077
+100% 25/25 [00:01<00:00, 13.92it/s]
+Epoch 5 | Train Loss: 17.3312 | Train Acc: 0.5120
+Validation Acc: 0.5077
+100% 25/25 [00:01<00:00, 13.73it/s]
+Epoch 6 | Train Loss: 17.3411 | Train Acc: 0.5009
+Validation Acc: 0.5169
+100% 25/25 [00:01<00:00, 13.76it/s]
+Epoch 7 | Train Loss: 17.3695 | Train Acc: 0.4988
+Validation Acc: 0.5077
+100% 25/25 [00:01<00:00, 13.92it/s]
+Epoch 8 | Train Loss: 17.3209 | Train Acc: 0.5028
+Validation Acc: 0.5389
+100% 25/25 [00:02<00:00, 11.28it/s]
+Epoch 9 | Train Loss: 17.2505 | Train Acc: 0.5425
+Validation Acc: 0.5775
+100% 25/25 [00:02<00:00, 11.88it/s]
+Epoch 10 | Train Loss: 17.2721 | Train Acc: 0.5244
+Validation Acc: 0.5300
+100% 25/25 [00:01<00:00, 13.27it/s]
+Epoch 11 | Train Loss: 17.2267 | Train Acc: 0.5412
+Validation Acc: 0.5121
+100% 25/25 [00:01<00:00, 13.57it/s]
+Epoch 12 | Train Loss: 17.2685 | Train Acc: 0.5375
+Validation Acc: 0.5411
+100% 25/25 [00:01<00:00, 13.48it/s]
+Epoch 13 | Train Loss: 17.3119 | Train Acc: 0.5097
+Validation Acc: 0.6091
+100% 25/25 [00:01<00:00, 13.49it/s]
+Epoch 14 | Train Loss: 17.2241 | Train Acc: 0.5459
+Validation Acc: 0.5322
+100% 25/25 [00:02<00:00, 10.33it/s]
+Epoch 15 | Train Loss: 17.1538 | Train Acc: 0.5552
+Validation Acc: 0.5300
+100% 25/25 [00:01<00:00, 13.64it/s]
+Epoch 16 | Train Loss: 17.1396 | Train Acc: 0.5490
+Validation Acc: 0.5367
+100% 25/25 [00:01<00:00, 13.70it/s]
+Epoch 17 | Train Loss: 17.1707 | Train Acc: 0.5471
+Validation Acc: 0.5482
+100% 25/25 [00:01<00:00, 13.93it/s]
+Epoch 18 | Train Loss: 16.9367 | Train Acc: 0.5731
+Validation Acc: 0.5077
+100% 25/25 [00:01<00:00, 14.05it/s]
+Epoch 19 | Train Loss: 17.3202 | Train Acc: 0.5244
+Validation Acc: 0.5344
+100% 25/25 [00:02<00:00, 12.08it/s]
+Epoch 20 | Train Loss: 17.0543 | Train Acc: 0.5696
+Validation Acc: 0.5411
+100% 25/25 [00:02<00:00, 11.85it/s]
+Epoch 21 | Train Loss: 17.0143 | Train Acc: 0.5600
+Validation Acc: 0.5344
+100% 25/25 [00:01<00:00, 13.50it/s]
+Epoch 22 | Train Loss: 17.1443 | Train Acc: 0.5431
+Validation Acc: 0.5322
+100% 25/25 [00:01<00:00, 13.89it/s]
+Epoch 23 | Train Loss: 17.0404 | Train Acc: 0.5562
+Validation Acc: 0.5389
+100% 25/25 [00:01<00:00, 13.82it/s]
+Epoch 24 | Train Loss: 17.0774 | Train Acc: 0.5715
+Validation Acc: 0.5300
+100% 25/25 [00:01<00:00, 13.74it/s]
+Epoch 25 | Train Loss: 17.1166 | Train Acc: 0.5431
+Validation Acc: 0.6046
+100% 25/25 [00:02<00:00, 10.50it/s]
+Epoch 26 | Train Loss: 16.9795 | Train Acc: 0.5658
+Validation Acc: 0.5456
+100% 25/25 [00:01<00:00, 13.93it/s]
+Epoch 27 | Train Loss: 17.0354 | Train Acc: 0.5614
+Validation Acc: 0.5456
+100% 25/25 [00:01<00:00, 13.99it/s]
+Epoch 28 | Train Loss: 17.1188 | Train Acc: 0.5442
+Validation Acc: 0.5367
+100% 25/25 [00:01<00:00, 14.01it/s]
+Epoch 29 | Train Loss: 17.1447 | Train Acc: 0.5489
+Validation Acc: 0.5322
+100% 25/25 [00:01<00:00, 13.97it/s]
+Epoch 30 | Train Loss: 17.0556 | Train Acc: 0.5699
+Validation Acc: 0.5456
+100% 25/25 [00:01<00:00, 13.41it/s]
+Epoch 31 | Train Loss: 16.9191 | Train Acc: 0.5834
+Validation Acc: 0.5615
+100% 25/25 [00:02<00:00, 10.99it/s]
+Epoch 32 | Train Loss: 16.9331 | Train Acc: 0.5790
+Validation Acc: 0.5389
+100% 25/25 [00:01<00:00, 13.97it/s]
+Epoch 33 | Train Loss: 16.9950 | Train Acc: 0.5705
+Validation Acc: 0.5749
+100% 25/25 [00:01<00:00, 13.60it/s]
+Epoch 34 | Train Loss: 16.8285 | Train Acc: 0.5787
+Validation Acc: 0.5344
+100% 25/25 [00:01<00:00, 14.00it/s]
+Epoch 35 | Train Loss: 16.9036 | Train Acc: 0.5880
+Validation Acc: 0.5478
+100% 25/25 [00:01<00:00, 13.83it/s]
+Epoch 36 | Train Loss: 17.0737 | Train Acc: 0.5488
+Validation Acc: 0.5456
+100% 25/25 [00:02<00:00, 11.07it/s]
+Epoch 37 | Train Loss: 16.8055 | Train Acc: 0.5925
+Validation Acc: 0.5705
+100% 25/25 [00:01<00:00, 12.51it/s]
+Epoch 38 | Train Loss: 16.9294 | Train Acc: 0.5802
+Validation Acc: 0.5593
+100% 25/25 [00:01<00:00, 13.60it/s]
+Epoch 39 | Train Loss: 16.7377 | Train Acc: 0.5837
+Validation Acc: 0.5682
+100% 25/25 [00:01<00:00, 13.67it/s]
+Epoch 40 | Train Loss: 16.7247 | Train Acc: 0.5846
+Validation Acc: 0.6266
+100% 25/25 [00:01<00:00, 13.79it/s]
+Epoch 41 | Train Loss: 16.7256 | Train Acc: 0.5859
+Validation Acc: 0.5660
+100% 25/25 [00:01<00:00, 13.95it/s]
+Epoch 42 | Train Loss: 16.7318 | Train Acc: 0.5850
+Validation Acc: 0.5367
+100% 25/25 [00:02<00:00, 10.37it/s]
+Epoch 43 | Train Loss: 16.7312 | Train Acc: 0.5780
+Validation Acc: 0.5727
+100% 25/25 [00:01<00:00, 12.83it/s]
+Epoch 44 | Train Loss: 16.6275 | Train Acc: 0.5925
+Validation Acc: 0.5749
+100% 25/25 [00:01<00:00, 13.83it/s]
+Epoch 45 | Train Loss: 16.5693 | Train Acc: 0.6007
+Validation Acc: 0.5749
+100% 25/25 [00:01<00:00, 13.57it/s]
+Epoch 46 | Train Loss: 16.5708 | Train Acc: 0.6153
+Validation Acc: 0.5705
+100% 25/25 [00:01<00:00, 13.72it/s]
+Epoch 47 | Train Loss: 16.4187 | Train Acc: 0.6144
+Validation Acc: 0.5883
+100% 25/25 [00:02<00:00, 11.86it/s]
+Epoch 48 | Train Loss: 16.6191 | Train Acc: 0.5962
+Validation Acc: 0.5861
+100% 25/25 [00:02<00:00, 11.81it/s]
+Epoch 49 | Train Loss: 16.6189 | Train Acc: 0.6002
+Validation Acc: 0.5638
+100% 25/25 [00:01<00:00, 13.09it/s]
+Epoch 50 | Train Loss: 16.5511 | Train Acc: 0.6000
+Validation Acc: 0.5839
+100% 25/25 [00:01<00:00, 13.71it/s]
+Epoch 51 | Train Loss: 16.6389 | Train Acc: 0.5852
+Validation Acc: 0.5995
+100% 25/25 [00:01<00:00, 13.60it/s]
+Epoch 52 | Train Loss: 16.5891 | Train Acc: 0.6028
+Validation Acc: 0.5839
+100% 25/25 [00:01<00:00, 13.64it/s]
+Epoch 53 | Train Loss: 16.3559 | Train Acc: 0.6299
+Validation Acc: 0.5950
+100% 25/25 [00:02<00:00, 10.31it/s]
+Epoch 54 | Train Loss: 16.2656 | Train Acc: 0.6189
+Validation Acc: 0.5950
+100% 25/25 [00:01<00:00, 13.96it/s]
+Epoch 55 | Train Loss: 16.2792 | Train Acc: 0.6200
+Validation Acc: 0.5724
+100% 25/25 [00:01<00:00, 13.82it/s]
+Epoch 56 | Train Loss: 16.3034 | Train Acc: 0.6239
+Validation Acc: 0.5835
+100% 25/25 [00:01<00:00, 14.12it/s]
+Epoch 57 | Train Loss: 16.2473 | Train Acc: 0.6284
+Validation Acc: 0.5724
+100% 25/25 [00:01<00:00, 13.81it/s]
+Epoch 58 | Train Loss: 16.3481 | Train Acc: 0.6208
+Validation Acc: 0.6017
+100% 25/25 [00:01<00:00, 12.76it/s]
+Epoch 59 | Train Loss: 16.3218 | Train Acc: 0.6159
+Validation Acc: 0.5816
+100% 25/25 [00:02<00:00, 11.52it/s]
+Epoch 60 | Train Loss: 16.4361 | Train Acc: 0.6120
+Validation Acc: 0.5973
+100% 25/25 [00:01<00:00, 13.73it/s]
+Epoch 61 | Train Loss: 16.1919 | Train Acc: 0.6112
+Validation Acc: 0.5839
+100% 25/25 [00:01<00:00, 13.29it/s]
+Epoch 62 | Train Loss: 16.3102 | Train Acc: 0.6137
+Validation Acc: 0.5883
+100% 25/25 [00:01<00:00, 13.34it/s]
+Epoch 63 | Train Loss: 16.6159 | Train Acc: 0.5952
+Validation Acc: 0.5724
+100% 25/25 [00:02<00:00, 12.09it/s]
+Epoch 64 | Train Loss: 16.0854 | Train Acc: 0.6348
+Validation Acc: 0.6040
+100% 25/25 [00:02<00:00,  9.15it/s]
+Epoch 65 | Train Loss: 16.2378 | Train Acc: 0.6118
+Validation Acc: 0.5995
+100% 25/25 [00:01<00:00, 13.32it/s]
+Epoch 66 | Train Loss: 16.1454 | Train Acc: 0.6236
+Validation Acc: 0.5950
+100% 25/25 [00:01<00:00, 13.89it/s]
+Epoch 67 | Train Loss: 16.1488 | Train Acc: 0.6192
+Validation Acc: 0.6040
+100% 25/25 [00:01<00:00, 13.80it/s]
+Epoch 68 | Train Loss: 16.1050 | Train Acc: 0.6258
+Validation Acc: 0.5768
+100% 25/25 [00:01<00:00, 13.82it/s]
+Epoch 69 | Train Loss: 16.3516 | Train Acc: 0.6278
+Validation Acc: 0.5861
+100% 25/25 [00:01<00:00, 14.19it/s]
+Epoch 70 | Train Loss: 16.2822 | Train Acc: 0.6140
+Validation Acc: 0.5950
+100% 25/25 [00:02<00:00, 10.64it/s]
+Epoch 71 | Train Loss: 16.0135 | Train Acc: 0.6321
+Validation Acc: 0.5768
+100% 25/25 [00:01<00:00, 13.81it/s]
+Epoch 72 | Train Loss: 16.1046 | Train Acc: 0.6239
+Validation Acc: 0.5816
+100% 25/25 [00:01<00:00, 14.57it/s]
+Epoch 73 | Train Loss: 16.0743 | Train Acc: 0.6283
+Validation Acc: 0.5768
+100% 25/25 [00:01<00:00, 14.33it/s]
+Epoch 74 | Train Loss: 15.9526 | Train Acc: 0.6343
+Validation Acc: 0.5950
+100% 25/25 [00:01<00:00, 14.32it/s]
+Epoch 75 | Train Loss: 15.9818 | Train Acc: 0.6350
+Validation Acc: 0.5746
+100% 25/25 [00:01<00:00, 12.57it/s]
+Epoch 76 | Train Loss: 16.1877 | Train Acc: 0.6185
+Validation Acc: 0.5813
+100% 25/25 [00:02<00:00, 11.39it/s]
+Epoch 77 | Train Loss: 15.9617 | Train Acc: 0.6398
+Validation Acc: 0.5813
+100% 25/25 [00:01<00:00, 13.18it/s]
+Epoch 78 | Train Loss: 16.0485 | Train Acc: 0.6240
+Validation Acc: 0.5973
+100% 25/25 [00:01<00:00, 14.09it/s]
+Epoch 79 | Train Loss: 15.9729 | Train Acc: 0.6397
+Validation Acc: 0.5835
+100% 25/25 [00:01<00:00, 13.86it/s]
+Epoch 80 | Train Loss: 16.0135 | Train Acc: 0.6280
+Validation Acc: 0.6084
+100% 25/25 [00:01<00:00, 14.44it/s]
+Epoch 81 | Train Loss: 15.8118 | Train Acc: 0.6218
+Validation Acc: 0.5950
+100% 25/25 [00:02<00:00, 10.74it/s]
+Epoch 82 | Train Loss: 16.0289 | Train Acc: 0.6309
+Validation Acc: 0.5928
+100% 25/25 [00:01<00:00, 13.88it/s]
+Epoch 83 | Train Loss: 16.1027 | Train Acc: 0.6312
+Validation Acc: 0.6129
+100% 25/25 [00:01<00:00, 14.29it/s]
+Epoch 84 | Train Loss: 15.8571 | Train Acc: 0.6365
+Validation Acc: 0.6084
+100% 25/25 [00:01<00:00, 13.97it/s]
+Epoch 85 | Train Loss: 16.2084 | Train Acc: 0.6262
+Validation Acc: 0.5950
+100% 25/25 [00:01<00:00, 14.21it/s]
+Epoch 86 | Train Loss: 15.9185 | Train Acc: 0.6346
+Validation Acc: 0.5839
+100% 25/25 [00:01<00:00, 13.90it/s]
+Epoch 87 | Train Loss: 15.7256 | Train Acc: 0.6435
+Validation Acc: 0.6040
+100% 25/25 [00:02<00:00, 10.61it/s]
+Epoch 88 | Train Loss: 15.8711 | Train Acc: 0.6405
+Validation Acc: 0.5861
+100% 25/25 [00:01<00:00, 14.16it/s]
+Epoch 89 | Train Loss: 15.8932 | Train Acc: 0.6296
+Validation Acc: 0.6040
+100% 25/25 [00:01<00:00, 13.90it/s]
+Epoch 90 | Train Loss: 15.7326 | Train Acc: 0.6340
+Validation Acc: 0.5950
+100% 25/25 [00:01<00:00, 14.17it/s]
+Epoch 91 | Train Loss: 15.8009 | Train Acc: 0.6415
+Validation Acc: 0.5768
+100% 25/25 [00:01<00:00, 13.74it/s]
+Epoch 92 | Train Loss: 15.5874 | Train Acc: 0.6521
+Validation Acc: 0.6017
+100% 25/25 [00:01<00:00, 12.53it/s]
+Epoch 93 | Train Loss: 15.6204 | Train Acc: 0.6446
+Validation Acc: 0.5746
+100% 25/25 [00:02<00:00, 11.64it/s]
+Epoch 94 | Train Loss: 15.6797 | Train Acc: 0.6524
+Validation Acc: 0.5861
+100% 25/25 [00:01<00:00, 14.01it/s]
+Epoch 95 | Train Loss: 15.3849 | Train Acc: 0.6568
+Validation Acc: 0.5768
+100% 25/25 [00:01<00:00, 13.75it/s]
+Epoch 96 | Train Loss: 15.6766 | Train Acc: 0.6468
+Validation Acc: 0.5973
+100% 25/25 [00:01<00:00, 14.26it/s]
+Epoch 97 | Train Loss: 15.4263 | Train Acc: 0.6443
+Validation Acc: 0.6065
+100% 25/25 [00:01<00:00, 14.13it/s]
+Epoch 98 | Train Loss: 15.6247 | Train Acc: 0.6521
+Validation Acc: 0.5835
+100% 25/25 [00:02<00:00, 11.23it/s]
+Epoch 99 | Train Loss: 15.7483 | Train Acc: 0.6401
+Validation Acc: 0.6107
+100% 25/25 [00:01<00:00, 13.32it/s]
+Epoch 100 | Train Loss: 15.7193 | Train Acc: 0.6459
+Validation Acc: 0.6196
