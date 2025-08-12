@@ -2,10 +2,14 @@
 import random
 import numpy as np
 import torch
-from vit_pytorch.efficient import ViT
-from linformer import Linformer
+from MyViT import ViT
+#from linformer import Linformer
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+#dataset path
+train_dataset_path = "tests/data/train"
+test_dataset_path = "tests/data/test"
 
 # Training hyperparameters
 batch_size = 64
@@ -17,20 +21,16 @@ seed = 42
 
 # Model
 def build_model():
-    efficient_transformer = Linformer(
-        dim=128,
-        seq_len=16+1,
-        depth=12,
-        heads=8,
-        k=64
-    )
     model = ViT(
-        dim=128,
         image_size=32,
         patch_size=8,
         num_classes=2,
-        transformer=efficient_transformer,
-        channels=3,
+        dim=128,
+        depth = 12,
+        heads = 8,
+        mlp_dim = 256,
+        dropout=0.1,
+        emb_dropout=0.1
     ).to(device)
     return model
 

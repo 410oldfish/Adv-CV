@@ -1,4 +1,4 @@
-from config import batch_size, epochs, lr, gamma, seed, seed_everything, build_model, device
+from config import batch_size, epochs, lr, gamma, seed, seed_everything, build_model, device, train_dataset_path
 from vit_prepare import get_train_valid_loaders
 import torch
 import torch.nn as nn
@@ -7,7 +7,7 @@ from torch.optim.lr_scheduler import StepLR
 from tqdm import tqdm
 
 seed_everything(seed)
-train_loader, valid_loader = get_train_valid_loaders('data/train')
+train_loader, valid_loader = get_train_valid_loaders(train_dataset_path)
 model = build_model()
 
 criterion = nn.CrossEntropyLoss()

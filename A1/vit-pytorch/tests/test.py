@@ -1,8 +1,8 @@
 ﻿from vit_prepare import get_test_loader
-from config import build_model, device
+from config import build_model, device, test_dataset_path
 import torch
 
-test_loader = get_test_loader('data/test')
+test_loader = get_test_loader(test_dataset_path)
 model = build_model()
 model.load_state_dict(torch.load('cats_dogs_vit.pth', map_location=device))
 model.eval()
