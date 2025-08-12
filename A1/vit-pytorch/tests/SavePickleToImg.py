@@ -1,26 +1,13 @@
 ﻿from PIL import Image
 import numpy as np
 import os
+from config import cifar10_label_names
 
 def unpickle(file):
     import pickle
     with open(file, 'rb') as fo:
         dict = pickle.load(fo, encoding='bytes')
     return dict
-
-# CIFAR-10 类别名称
-cifar10_label_names = {
-    0: 'airplane',
-    1: 'automobile',
-    2: 'bird',
-    3: 'cat',
-    4: 'deer',
-    5: 'dog',
-    6: 'frog',
-    7: 'horse',
-    8: 'ship',
-    9: 'truck',
-}
 
 def save_cifar10_images(data_batch_path, save_dir):
     data_dict = unpickle(data_batch_path)

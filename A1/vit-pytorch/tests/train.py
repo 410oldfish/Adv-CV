@@ -44,5 +44,5 @@ for epoch in range(epochs):
             val_acc += acc.item()
     print(f"Validation Acc: {val_acc/len(valid_loader):.4f}")
 
-torch.save(model.state_dict(), 'cats_dogs_vit.pth')
-print("✅ 模型已保存为 cats_dogs_vit.pth")
+torch.save(model.state_dict(), 'cifar_myViT.pth')
+print("✅ 模型已保存为 cifar_myViT.pth")

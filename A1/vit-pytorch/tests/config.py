@@ -7,9 +7,23 @@ from MyViT import ViT
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
+# CIFAR-10 label names
+cifar10_label_names = {
+    0: 'airplane',
+    1: 'automobile',
+    2: 'bird',
+    3: 'cat',
+    4: 'deer',
+    5: 'dog',
+    6: 'frog',
+    7: 'horse',
+    8: 'ship',
+    9: 'truck',
+}
+
 #dataset path
-train_dataset_path = "tests/data/train"
-test_dataset_path = "tests/data/test"
+train_dataset_path = "data/train"
+test_dataset_path = "data/test"
 
 # Training hyperparameters
 batch_size = 64
@@ -24,7 +38,7 @@ def build_model():
     model = ViT(
         image_size=32,
         patch_size=8,
-        num_classes=2,
+        num_classes=10,
         dim=128,
         depth = 12,
         heads = 8,
