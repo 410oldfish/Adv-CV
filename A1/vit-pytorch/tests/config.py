@@ -29,7 +29,7 @@ test_dataset_path = "data/test"
 batch_size = 64
 test_batch_size = 64
 epochs = 100
-lr = 3e-5
+lr = 3e-5 #1e-4
 gamma = 0.7
 seed = 42
 

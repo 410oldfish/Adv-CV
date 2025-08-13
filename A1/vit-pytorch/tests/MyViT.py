@@ -17,7 +17,7 @@ class FeedForward(nn.Module):
         self.net = nn.Sequential(
             nn.LayerNorm(dim),
             nn.Linear(dim, hidden_dim),
-            nn.GELU(),
+            nn.GELU(), # REL
             nn.Dropout(dropout),
             nn.Linear(hidden_dim, dim),
             nn.Dropout(dropout)
