@@ -6,6 +6,9 @@ from PIL import Image, ImageEnhance, ImageFilter
 
 # -------------------- Augmentations --------------------
 
+def aug_identity(img: Image.Image) -> Image.Image:
+    return img.copy()
+
 def aug_hflip(img: Image.Image) -> Image.Image:
     return img.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
 
@@ -39,12 +42,13 @@ def aug_ty_down2(img: Image.Image) -> Image.Image:
 
 
 AUGS: List[Tuple[str, Callable[[Image.Image], Image.Image]]] = [
+    ("orig",            aug_identity),
     ("hflip",           aug_hflip),
-    ("vflip",           aug_vflip),
+    # ("vflip",           aug_vflip),
     ("rotp15",          aug_rotate_p15),
     ("rotn15",          aug_rotate_n15),
-    ("txr2",            aug_tx_right2),
-    ("tyd2",            aug_ty_down2)
+    # ("txr2",            aug_tx_right2),
+    # ("tyd2",            aug_ty_down2)
 ]
 
 # -------------------- Filename helpers --------------------
@@ -78,7 +82,8 @@ def build_output_stem(orig_name: str) -> Tuple[str, str]:
 
 def enhance_dataset_separate(
     input_dir: str,
-    output_dir: str
+    output_dir: str,
+    write_original_clean_copy: bool = False
 ) -> None:
     """
     Reads RGB 32x32 images from input_dir.
@@ -111,7 +116,9 @@ def enhance_dataset_separate(
                 _, base_stem = build_output_stem(p.name)
 
                 for suffix, fn in AUGS:
-                    out_img = fn(img)  # apply exactly ONE augmentation
+                    if suffix == "orig" and not write_original_clean_copy:
+                        continue
+                    out_img = fn(img)  # apply augmentation
                     out_name = f"{base_stem}_{suffix}.jpg"
                     out_img.save(out_path / out_name, format="JPEG", quality=95)
                     total_written += 1
@@ -122,7 +129,12 @@ def enhance_dataset_separate(
     print(f"Done. Wrote {total_written} images to {out_path}")
 
 if __name__ == "__main__":
+    script_dir = Path(__file__).resolve().parent
+    input_dir = script_dir / "data" / "train"
+    output_dir = script_dir / "data" / "train_enhance"
+
     enhance_dataset_separate(
-        input_dir="/Users/yuanhong/Documents/GitHub/Adv-CV/A1/vit-pytorch/tests/data/test",
-        output_dir="/Users/yuanhong/Documents/GitHub/Adv-CV/A1/vit-pytorch/tests/data/test_enhance"
+        input_dir=str(input_dir),
+        output_dir=str(output_dir),
+        write_original_clean_copy=True,
     )
