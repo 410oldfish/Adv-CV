@@ -3,7 +3,7 @@ from torch import nn
 
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
-
+from PosEmbedding import build_positional_embedding
 # helpers
 
 def pair(t):
@@ -37,10 +37,11 @@ class Attention(nn.Module):
     Returns:
         out (Tensor): Output tensor after applying attention.
     """
-    def __init__(self, dim, heads= 8, dim_head = 64, dropout = 0 ):
+    def __init__(self, dim, heads= 8, dim_head = 64, dropout = 0, positional_module=None):
         super ().__init__()
         self.heads = heads
         self.dim_head = dim_head
+        self.positional_module = positional_module
         inner_dim = dim * dim_head #多头拼接后的总维度
         self.scale = dim_head ** -0.5 ## 1/sqrt(dim_head) 稳定点积范围
 
@@ -82,6 +83,9 @@ class Attention(nn.Module):
         qkv = self.to_qkv(x).chunk(3, dim=-1)
         q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = self.heads), qkv)
 
+        if getattr(self.positional_module, "is_rotary", False):
+            q, k = self.positional_module.apply_rotary(q, k) 
+
         #点积注意力: (b, h, n, d) @ (b, h, d, n) -> (b, h, n, n)
         dots = q @ k.transpose(-1, -2) * self.scale
 
@@ -109,13 +113,13 @@ class Transformer(nn.Module):
         mlp_dim (int): Dimension of the feed-forward layer.
         dropout (float): Dropout rate.
     """
-    def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout = 0.):
+    def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout = 0., positional_module=None):
         super().__init__()
         self.norm = nn.LayerNorm(dim)
         self.layers = nn.ModuleList([])
         for _ in range(depth):
             self.layers.append(nn.ModuleList([
-                Attention(dim, heads = heads, dim_head = dim_head, dropout = dropout),
+                Attention(dim, heads = heads, dim_head = dim_head, dropout = dropout, positional_module = positional_module),
                 FeedForward(dim, mlp_dim, dropout = dropout)
             ]))
 
@@ -135,7 +139,10 @@ class Transformer(nn.Module):
         return self.norm(x)
 
 class ViT(nn.Module):
-    def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, channels = 3, dim_head = 64, dropout = 0., emb_dropout =0., pool = 'cls'):
+    def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, 
+                 channels = 3, dim_head = 64, dropout = 0., 
+                 emb_dropout =0., pool = 'cls',
+                 pos_emb: str = "learnable", rope_base: float = 10000.0, interpolate_factor: float = 1.0):
         super().__init__()
         #图像大小
         image_height, image_width = pair(image_size)
@@ -155,11 +162,18 @@ class ViT(nn.Module):
             nn.LayerNorm(dim),
         )
 
-        self.pos_embedding = nn.Parameter(torch.randn(1, num_patches + 1, dim))
+        self.positional = build_positional_embedding(
+            kind=pos_emb,
+            dim=dim,
+            num_tokens=num_patches + 1,
+            dim_head=dim_head,                 # needed for RoPE
+            rope_base=rope_base,
+            interpolate_factor=interpolate_factor,
+        )
         self.cls_token = nn.Parameter(torch.randn(1, 1, dim))
         self.dropout = nn.Dropout(emb_dropout)
 
-        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim, dropout)
+        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim, dropout, positional_module=self.positional)
 
         self.pool = pool
         self.to_latent = nn.Identity()
@@ -174,7 +188,7 @@ class ViT(nn.Module):
         #添加cls token
         cls_tokens = repeat(self.cls_token, '1 1 d -> b 1 d', b = b) #复制cls token到batch size
         x = torch.cat((cls_tokens, x), dim=1)
-        x += self.pos_embedding[:, :(n + 1)] #添加位置编码
+        x = self.positional(x)
         x = self.dropout(x)
 
         x = self.transformer(x)
