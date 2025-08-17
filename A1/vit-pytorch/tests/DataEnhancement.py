@@ -45,10 +45,17 @@ AUGS: List[Tuple[str, Callable[[Image.Image], Image.Image]]] = [
     ("orig",            aug_identity),
     ("hflip",           aug_hflip),
     # ("vflip",           aug_vflip),
+<<<<<<< HEAD
     ("rotp15",          aug_rotate_p15),
     ("rotn15",          aug_rotate_n15),
     # ("txr2",            aug_tx_right2),
     # ("tyd2",            aug_ty_down2)
+=======
+    # ("rotp15",          aug_rotate_p15),
+    # ("rotn15",          aug_rotate_n15),
+    ("txr2",            aug_tx_right2),
+    ("tyd2",            aug_ty_down2)
+>>>>>>> 643a44d5b ([feat]新增增强后的训练集)
 ]
 
 # -------------------- Filename helpers --------------------
@@ -134,7 +141,12 @@ if __name__ == "__main__":
     output_dir = script_dir / "data" / "train_enhance"
 
     enhance_dataset_separate(
+<<<<<<< HEAD
         input_dir=str(input_dir),
         output_dir=str(output_dir),
         write_original_clean_copy=True,
+=======
+        input_dir="data/train",
+        output_dir="data/train_enhance"
+>>>>>>> 643a44d5b ([feat]新增增强后的训练集)
     )
