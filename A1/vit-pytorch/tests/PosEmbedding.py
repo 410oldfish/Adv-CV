@@ -43,7 +43,7 @@ class LearnablePositionalEmbedding(BasePositionalEmbedding):
     """
     Learnable positional embeddings (default in many ViT implementations).
     """
-    def __init__(self, dim: int, num_tokens: int, init_std: float = 0.02):
+    def __init__(self, dim: int, num_tokens: int, init_std: float = 1):
         super().__init__(dim, num_tokens)
         pos = torch.zeros(1, num_tokens, dim)  # [1, L, D]
         nn.init.trunc_normal_(pos, std=init_std)
