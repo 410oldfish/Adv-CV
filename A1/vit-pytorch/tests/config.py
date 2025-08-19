@@ -44,8 +44,7 @@ seed = 42
 #         depth = 12,
 #         heads = 8,
 #         mlp_dim = 256,
-#         dropout=0.1,
-#         pos_emb="learnable",
+#         dropout=0.1
 #         ).to(device)
 #     return model
 
