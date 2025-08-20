@@ -40,7 +40,7 @@ class Attention(nn.Module):
         super ().__init__()
         self.heads = heads
         self.dim_head = dim_head
-        inner_dim = dim * dim_head #多头拼接后的总维度
+        inner_dim = heads * dim_head #多头拼接后的总维度
         self.scale = dim_head ** -0.5 ## 1/sqrt(dim_head) 稳定点积范围
 
         #预归一化

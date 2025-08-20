@@ -4,7 +4,7 @@ import torch
 
 test_loader = get_test_loader(test_dataset_path)
 model = build_model()
-model.load_state_dict(torch.load('cats_dogs_vit.pth', map_location=device))
+model.load_state_dict(torch.load('cifar_myViT.pth', map_location=device))
 model.eval()
 
 correct = 0
